@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixedNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">My Portfolio</a>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="py-5 bg-light">
+        <div class="container spacing-x">
+          <div class="row">
+            <div class="col-7 hero">
+                <h1 id="hero-title">Hi, I'm a <span id="dynamic-role"></span></h1>
+                <p>Building stunning and professional web experiences.</p>
+                <a href="#about" class="btn">Discover More</a>
+                <button class="btn"><a href="Assets/Resume.pdf" download> Download PDF <i class="fa-regular fa-circle-down ml-2"></i></a></button>
+                
+              
+                <!-- Social Media Icons -->
+                <div class="social-links mt-4">
+                    <a href="https://wa.me/7013988318" target="_blank" class="text-dark m-3">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/chandu95_" target="_blank" class="text-dark m-3">
+                    <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/chandu7000" target="_blank" class="text-dark m-3">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/chandu7000" target="_blank" class="text-dark m-3">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+              <img src="https://res.cloudinary.com/dmafwatx5/image/upload/v1727030004/port1_trtqcm.jpg" alt="my image" class="image" />
+            </div>
+          </div>
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container spacing pb-5">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="https://res.cloudinary.com/dmafwatx5/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1727951863/portfolio-pic_mwmr8i.jpg" alt="my image" class="img-fluid rounded-circle" />
+                </div>
+                <div class="col-md-8">
+                    <p>Hello, I'm Chandra Sekhar, a software engineer with a passion for developing applications that solve real-world problems. With a background in full-stack development, I specialize in front-end technologies like HTML, CSS, JavaScript, and back-end tools like Java, Spring Boot, and databases. I enjoy learning new technologies and collaborating with others to create impactful projects.</p>
+                    <div class="container">
+                      
+                      <ul class="list-group">
+                        
+                          <li class="list-group-item">
+                            <h2 class="mb-4">Education</h2>
+                              <h5>Bachelor of Technology in Electronics and Communication</h5>
+                              <p>Lakireddy Balireddy College of Engineering, 2024</p>
+                              <p>Graduated with honors in Electronics and Communication, specializing in Software Development and Web Technologies.</p>
+                          </li>
+                      </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container spacing">
+            <h2 class="text-center mb-4">Skills & Tools</h2>
+            <div class="row">
+                <div class="col-md-4 box">
+                    <h5>Programming Languages</h5>
+                    <ul class="list-unstyled">
+                      <li><i class="fab fa-html5"></i> HTML5</li>
+                      <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                      <li><i class="fab fa-js"></i> JavaScript</li>
+                      <li><i class="fab fa-java"></i> Java</li>
+                      <li><i class="fab fa-python"></i> Python</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 box">
+                    <h5>Frameworks & Libraries</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fab fa-react"></i> React.js</li>
+                        <li><i class="fab fa-node-js"></i> Node.js</li>
+                        <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                        <li><i class="fab fa-java"></i> Spring Boot</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 box">
+                    <h5>Developer Tools</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-code"></i> Visual Studio Code</li>
+                        <li><i class="fa-solid fa-clipboard"></i> Notepad++</li>
+                        <li><i class="fas fa-git"></i> Git</li>
+                        <li><i class="fab fa-github"></i> GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Skills & Expertise</h2>
+                <div id="skills-container" class="row">
+                    <!-- Skills will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </section>    
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container spacing pb-5">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Login SignUp Regestration App</h5>
+                            <p class="card-text">A brief description of the project goes here. It's a web application built using JavaScript, React, and Node.js.
+                            </p>
+                            <a href="https://github.com/chandu7000/Signin-Signup.git" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Institute Web Page</h5>
+                            <p class="card-text">This Project is a Front-end web application designed. It's a web application built using HTML, CSS, JavaScript</p>
+                            <a href="https://github.com/chandu7000/InstituteWebPage.git" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Book Management System</h5>
+                            <p class="card-text">This project is a Java-based application designed to solve problem X. It uses Spring Boot and MySQL for the back-end.</p>
+                            <a href="https://github.com/chandu7000/BookManagement.git" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text">A brief description of the project goes here. It's a web application built using HTML, CSS and JavaScript.
+                            </p>
+                            <a href="https://github.com/chandu7000/My-Portfolio.git" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../Assets/institute_image.png" class="card-img-top align-items-center" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Institute Web Page</h5>
+                            <p class="card-text">This Project is a Front-end web application designed. It's a web application built using HTML, CSS, JavaScript</p>
+                            <a href="https://github.com/chandu7000/.git" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../Assets/institute_image.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Management System</h5>
+                            <p class="card-text">This project is a Java-based application designed to solve problem X. It uses Spring Boot and MySQL for the back-end.</p>
+                            <a href="https://github.com/chandu7000/.git" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+<!-- Contact Me Section -->
+<section id="contact" class="bg-dark text-white py-5">
+  <div class="container text-center">
+      <h3>Get In Touch</h3>
+      <p>If you'd like to collaborate or have any inquiries, feel free to reach out to me!</p>
+      
+      <!-- Email Button -->
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      
+      <!-- Social Media Icons -->
+      <div class="social-links mt-4">
+        <a href="https://wa.me/7013988318" target="_blank" class="text-white mx-3">
+          <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/chandu95_" target="_blank" class="text-white mx-3">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/chandu7000" target="_blank" class="text-white mx-3">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/chandu7000" target="_blank" class="text-white mx-3">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white">
+  <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+</footer>
+
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
