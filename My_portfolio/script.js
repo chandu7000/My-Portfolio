@@ -7,7 +7,7 @@ let charIndex = 0;
 function typeEffect() {
   if (charIndex < roles[roleIndex].length) {
     dynamicRole.textContent += roles[roleIndex].charAt(charIndex);
-    dynamicRole.style.color= "purple";
+    dynamicRole.style.color = "purple";
     charIndex++;
     setTimeout(typeEffect, 100);
   } else {
@@ -75,15 +75,15 @@ form.addEventListener('submit', (e) => {
 // Smooth scrolling for anchor links
 $(document).ready(function () {
   $("a[href^='#']").on("click", function (e) {
-      e.preventDefault();
-      var target = this.hash;
-      var $target = $(target);
+    e.preventDefault();
+    var target = this.hash;
+    var $target = $(target);
 
-      $("html, body").animate({
-          scrollTop: $target.offset().top
-      }, 800, function () {
-          window.location.hash = target;
-      });
+    $("html, body").animate({
+      scrollTop: $target.offset().top
+    }, 800, function () {
+      window.location.hash = target;
+    });
   });
 });
 
@@ -91,22 +91,22 @@ $(document).ready(function () {
 // Skills Data
 const skillsData = [
   {
-      category: "Technical Skills",
-      skills: [
-          { name: "HTML5", percentage: 80, color: "bg-primary" },
-          { name: "CSS3", percentage: 70, color: "bg-secondary" },
-          { name: "JavaScript", percentage: 60, color: "bg-info" },
-          { name: "MySQL", percentage: 70, color: "bg-warning" },
-      ],
+    category: "Technical Skills",
+    skills: [
+      { name: "HTML5", percentage: 80, color: "bg-primary" },
+      { name: "CSS3", percentage: 70, color: "bg-secondary" },
+      { name: "JavaScript", percentage: 60, color: "bg-info" },
+      { name: "MySQL", percentage: 70, color: "bg-warning" },
+    ],
   },
   {
-      category: "Frameworks, Programming Languages & Dev Tools",
-      skills: [
-          { name: "React Js", percentage: 70, color: "bg-primary" },
-          { name: "Node Js", percentage: 70, color: "bg-secondary" },
-          { name: "Python", percentage: 80, color: "bg-info" },
-          { name: "Java", percentage: 60, color: "bg-success" },
-      ],
+    category: "Frameworks, Programming Languages & Dev Tools",
+    skills: [
+      { name: "React Js", percentage: 70, color: "bg-primary" },
+      { name: "Node Js", percentage: 70, color: "bg-secondary" },
+      { name: "Python", percentage: 80, color: "bg-info" },
+      { name: "Java", percentage: 60, color: "bg-success" },
+    ],
   },
 ];
 
@@ -115,39 +115,39 @@ function renderSkills() {
   const skillsContainer = document.getElementById("skills-container");
 
   skillsData.forEach((category) => {
-      // Create Column for Each Category
-      const col = document.createElement("div");
-      col.classList.add("col-md-6");
+    // Create Column for Each Category
+    const col = document.createElement("div");
+    col.classList.add("col-md-6");
 
-      // Add Category Title
-      const title = document.createElement("h5");
-      title.classList.add("mb-3");
-      title.textContent = category.category;
-      col.appendChild(title);
+    // Add Category Title
+    const title = document.createElement("h5");
+    title.classList.add("mb-3");
+    title.textContent = category.category;
+    col.appendChild(title);
 
-      // Add Skills
-      category.skills.forEach((skill) => {
-          // Skill Name
-          const skillName = document.createElement("p");
-          skillName.textContent = skill.name;
+    // Add Skills
+    category.skills.forEach((skill) => {
+      // Skill Name
+      const skillName = document.createElement("p");
+      skillName.textContent = skill.name;
 
-          // Progress Bar
-          const progress = document.createElement("div");
-          progress.classList.add("progress", "mb-3");
+      // Progress Bar
+      const progress = document.createElement("div");
+      progress.classList.add("progress", "mb-3");
 
-          const progressBar = document.createElement("div");
-          progressBar.classList.add("progress-bar", skill.color);
-          progressBar.style.width = "0%"; // Initial width for animation
-          progressBar.setAttribute("data-percentage", skill.percentage); // Store percentage
-          progressBar.textContent = `${skill.percentage}%`;
+      const progressBar = document.createElement("div");
+      progressBar.classList.add("progress-bar", skill.color);
+      progressBar.style.width = "0%"; // Initial width for animation
+      progressBar.setAttribute("data-percentage", skill.percentage); // Store percentage
+      progressBar.textContent = `${skill.percentage}%`;
 
-          progress.appendChild(progressBar);
-          col.appendChild(skillName);
-          col.appendChild(progress);
-      });
+      progress.appendChild(progressBar);
+      col.appendChild(skillName);
+      col.appendChild(progress);
+    });
 
-      // Append Column to Container
-      skillsContainer.appendChild(col);
+    // Append Column to Container
+    skillsContainer.appendChild(col);
   });
 }
 
@@ -155,8 +155,8 @@ function renderSkills() {
 function animateSkills() {
   const progressBars = document.querySelectorAll("#skills .progress-bar");
   progressBars.forEach((bar) => {
-      const percentage = bar.getAttribute("data-percentage");
-      bar.style.width = `${percentage}%`;
+    const percentage = bar.getAttribute("data-percentage");
+    bar.style.width = `${percentage}%`;
   });
 }
 
@@ -167,8 +167,8 @@ function onScroll() {
   const screenPosition = window.innerHeight / 1.3;
 
   if (sectionPosition < screenPosition) {
-      animateSkills();
-      window.removeEventListener("scroll", onScroll); // Trigger only once
+    animateSkills();
+    window.removeEventListener("scroll", onScroll); // Trigger only once
   }
 }
 
