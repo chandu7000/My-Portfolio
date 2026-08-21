@@ -1,1 +1,5 @@
-export const heroRoles = ["Web Developer", "UI Designer", "Creative Coder"];
+export const heroRoles = [
+  "Full Stack Developer",
+  "MERN Stack Developer",
+  "React Developer",
+];
