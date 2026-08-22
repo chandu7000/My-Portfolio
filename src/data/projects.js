@@ -6,33 +6,124 @@ import image5 from "../assets/image5.png";
 
 export const projects = [
   {
-    title: "Real-Time Social Communication and Video Calling Platform (Full Stack)",
+    id: "social-communication",
+    title: "Real-Time Social Communication and Video Calling Platform",
+    type: "Full Stack",
+    featured: true,
     img: image1,
-    desc: "Developed a full-stack Video Calling App with real-time chat using React.js, Node.js, Express.js, MongoDB, Socket.IO, and styled with Tailwind CSS. Supports peer-to-peer video calls and instant messaging.",
-    link: "https://github.com/chandu7000/VideoCalling-ChatApp",
+    purpose:
+      "A full-stack communication application focused on bringing real-time messaging and peer-to-peer video calling into one responsive experience.",
+    features: [
+      "Real-time chat and instant messaging",
+      "Peer-to-peer video calling",
+      "Full-stack client and server architecture",
+      "Responsive Tailwind CSS interface",
+    ],
+    stack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "Tailwind CSS",
+    ],
+    repoUrl: "https://github.com/chandu7000/VideoCalling-ChatApp",
+    liveUrl: "https://real-time-social-communication-and.vercel.app",
   },
+
   {
-    title: "Job Recruitment And Application Management System (Full Stack)",
+    id: "recruitment-system",
+    title: "Job Recruitment And Application Management System",
+    type: "Full Stack",
+    featured: true,
     img: image2,
-    desc: "Built a full-stack Job Portal App using React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. Features include job listings, user authentication, role-based dashboards, and job applications with real-time status updates.",
-    link: "https://github.com/chandu7000/Job-Portal-App",
+    purpose:
+      "A full-stack recruitment platform that organizes job discovery, user access, role-specific workflows, applications, and application-status tracking.",
+    features: [
+      "User authentication",
+      "Role-based dashboards",
+      "Job listings and application workflows",
+      "Application status updates",
+    ],
+    stack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+    repoUrl: "https://github.com/chandu7000/Job-Portal-App",
+    liveUrl:
+      "https://job-recruitment-and-application-man.vercel.app/",
   },
+
   {
-    title: "Movie App (Full Stack)",
+    id: "movie-app",
+    title: "Movie App",
+    type: "Full Stack",
+    featured: false,
     img: image3,
-    desc: "his project is a React-based application designed to solve problem. It is used to React, The Movie Database(TMDB) API, Node.js, Javascript, Html, Tailwindcss.",
-    link: "https://github.com/chandu7000/MovieApp",
+    purpose:
+      "A React-based movie application that integrates The Movie Database (TMDB) API to present movie-related content through a modern web interface.",
+    features: [],
+    stack: [
+      "React.js",
+      "TMDB API",
+      "Node.js",
+      "JavaScript",
+      "HTML",
+      "Tailwind CSS",
+    ],
+    repoUrl: "https://github.com/chandu7000/MovieApp",
+
+    // Add Movie App deployed Live Demo URL here later.
+    liveUrl: "https://ncs-movie-app.netlify.app",
   },
+
   {
-    title: "Weather Forecast App (Frontend)",
+    id: "weather-forecast",
+    title: "Weather Forecast App",
+    type: "Frontend",
+    featured: false,
     img: image4,
-    desc: "This project is a React-based application designed to solve problem. It is used to React, Vite, Weather API, Node.js, Javascript, Html/CSS.",
-    link: "https://github.com/chandu7000/weather-forecast",
+    purpose:
+      "A React and Vite weather application that integrates a weather API to present forecast information in a focused frontend experience.",
+    features: [],
+    stack: [
+      "React.js",
+      "Vite",
+      "Weather API",
+      "Node.js",
+      "JavaScript",
+      "HTML/CSS",
+    ],
+    repoUrl: "https://github.com/chandu7000/weather-forecast",
+
+    // Add Weather Forecast App deployed Live Demo URL here later.
+    liveUrl: "https://weather-app-ncs.netlify.app",
   },
+
   {
-    title: "Institute Web Page (Frontend)",
+    id: "institute-page",
+    title: "Institute Web Page",
+    type: "Frontend",
+    featured: false,
     img: image5,
-    desc: "This Project is a Front-end web application designed. It's a web application built using HTML/CSS, JavaScript",
-    link: "https://github.com/chandu7000/InstituteWebPage",
+    purpose:
+      "A frontend institute website built with core web technologies to present structured information through a clean browser-based interface.",
+    features: [],
+    stack: ["HTML", "CSS", "JavaScript"],
+    repoUrl: "https://github.com/chandu7000/InstituteWebPage",
+
+    // Add Institute Web Page deployed Live Demo URL here later.
+    liveUrl: "https://institute-webpage.netlify.app",
   },
 ];
+
+export const featuredProjects = projects.filter(
+  (project) => project.featured,
+);
+
+export const otherProjects = projects.filter(
+  (project) => !project.featured,
+);

@@ -1,34 +1,44 @@
-import Button from "../components/ui/Button";
-import Card from "../components/ui/Card";
 import Container from "../components/ui/Container";
+import FeaturedProjectCard from "../components/ui/FeaturedProjectCard";
+import OtherProjectCard from "../components/ui/OtherProjectCard";
 import SectionHeading from "../components/ui/SectionHeading";
-import { projects } from "../data/projects";
+import { featuredProjects, otherProjects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-shell bg-surface/30">
-      <Container>
-        <SectionHeading eyebrow="Work" title="Projects" />
+    <section id="projects" className="section-shell relative overflow-hidden bg-surface/30">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.08),transparent_68%)]" />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <Card key={project.title} className="flex h-full flex-col overflow-hidden p-0 transition duration-200 ease-premium hover:-translate-y-1 hover:border-accent-blue/35">
-              <img
-                src={project.img}
-                alt={`${project.title} preview`}
-                loading="lazy"
-                className="h-48 w-full border-b border-line object-cover"
-              />
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <h3 className="text-lg font-semibold text-ink">{project.title}</h3>
-                <p className="my-3 flex-1 text-sm leading-6 text-muted">{project.desc}</p>
-                <Button href={project.link} target="_blank" rel="noreferrer" variant="secondary" className="mt-2 self-start">
-                  View Project
-                </Button>
-              </div>
-            </Card>
+      <Container className="relative">
+        <SectionHeading
+          eyebrow="Selected Work"
+          title="Flagship Projects"
+          description="A focused selection of my strongest full-stack work, followed by additional projects that show broader frontend and API experience."
+        />
+
+        <div className="mt-10 space-y-8 sm:mt-12 lg:space-y-10">
+          {featuredProjects.map((project, index) => (
+            <FeaturedProjectCard key={project.id} project={project} reverse={index % 2 === 1} />
           ))}
         </div>
+
+        {otherProjects.length > 0 && (
+          <div className="mt-16 border-t border-line pt-12 sm:mt-20 sm:pt-14">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-cyan">More Work</p>
+              <h3 className="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Other Projects</h3>
+              <p className="mt-3 text-sm leading-7 text-muted sm:text-base">
+                Additional applications that demonstrate practical use of React, JavaScript, external APIs, and core frontend technologies.
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {otherProjects.map((project) => (
+                <OtherProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          </div>
+        )}
       </Container>
     </section>
   );
